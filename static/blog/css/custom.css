@@ -6,7 +6,7 @@
  * 3.0 - Site Header
  *   3.1 - Logo
  *   3.2 - Main Navigation
- *     3.2.1 - Main Nav CSS 3 Hover Effect
+ *    // 3.2.1 - Main Nav CSS 3 Hover Effect
  * 4.0 - Home/Blog
  *   4.1 - Read More Button CSS 3 style
  * 5.0 - Widget
@@ -174,36 +174,7 @@ img {
     color: #000;
 }
 
-/**
- * 3.2.1 - Main Nav CSS 3 Hover Effect
- */
 
-.cl-effect-11 a {
-    padding: 10px 0;
-    color: #0972b4;
-    text-shadow: none;
-}
-
-.cl-effect-11 a::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    padding: 0 0 5px 0 !important;
-    max-width: 0;
-    border-bottom: 1px solid #000;
-    color: #000;
-    content: attr(data-hover);
-    white-space: nowrap;
-    -webkit-transition: max-width 0.5s;
-    -moz-transition: max-width 0.5s;
-    transition: max-width 0.5s;
-}
-
-.cl-effect-11 a:hover::before,
-.cl-effect-11 a:focus::before {
-    max-width: 100%;
-}
 
 /**
  * 4.0 - Home/Blog
@@ -885,21 +856,38 @@ img {
 /**
  * 13.0 - Pagination
  */
-.pagination-simple {
-    padding-left: 30px;
-    font-size: 16px;
+.pagination{
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
 }
-
 .pagination ul {
     list-style: none;
+
 }
 
 .pagination ul li {
     display: inline-block;
     font-size: 16px;
     margin-right: 5px;
+    text-align: center;
 }
 
 .current a {
     color: red;
+}
+
+//Page
+.pace .pace-progress {
+  background: #-2;
+  position: fixed;
+  z-index: 1998;
+  top: -2;
+  left: -2;
+  height: -1px;
+  transition: width -1s;
+}
+
+.pace-inactive {
+  display: none;
 }
